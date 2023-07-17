@@ -5,39 +5,34 @@
   <meta charset="utf-8">
   <title>Analizador de texto</title>
   <link rel="stylesheet" href="style.css" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
   <script src="index.js" type="module"></script>
+
   <header>
-    <h1>Text Analyzer VICKYTYPE</h1>
-    <div>
-      <img src="imagenes/lluvia_letras_libro.jpg" width="100">
-    </div>
+    <h1>Analizador de texto VICKYTYPE</h1>
   </header>
 
   <section class="main">
     <section class="seccionTxt">
-      <textarea class="boxTxt">Dale... ingresa tu texto!</textarea><br>
-      <button>Limpiar</button>  
+      <textarea name="user-input" placeholder="Dale... ingresa tu texto!"></textarea><br>
+      <button id="reset-button" onclick="clear_txtBox()">Limpiar</button>  
     </section>
     <section class="seccionMetricas">
-      <button>Palabras</button>
-      <button>Caracteres</button>
-      <button>Caracteres especiales</button>
-      <button>Números</button>
-      <button>Sumatoria</button>
-      <button>Promedio palabras</button>
-      <button>Longitud media palabras</button>
-
-      </button>
+      <ul class="listaMetricas">
+        <li class="li1" data-testid="word-count">Palabras:</li>
+        <li class="li2" data-testid="character-count">Caracteres:</li>
+        <li class="li3" data-testid="character-no-spaces-count">Caracteres especiales:</li>
+        <li class="li4" data-testid="number-count">Números:</li>
+        <li class="li5" data-testid="number-sum">Sumatoria:</li>
+        <li class="li6" data-testid="word-length-average">Longitud media palabras:</li>
+      </ul>
     </section>
   </section>
+
   <footer>
-    <i class="fa fa-copyright" style="font-size:48px;color:red"></i>
+    <p>Elsa Victoria Barragán O.</p>   
   </footer>
 </body>
 </html>

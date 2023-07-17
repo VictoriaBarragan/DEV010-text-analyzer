@@ -4,8 +4,9 @@
 }
 
 body{
-    background: #ffffff;
-    font-family:sans-serif; 
+    background:url(../imagenes/letrasColores.jpg);
+    background-attachment: fixed;
+    font-family:Verdana; 
     font-size: larger;
 }
 
@@ -13,19 +14,26 @@ header{
     text-align: center;
 }
 
+h1{
+    font-weight: normal;
+}
+
 header, .main{
-    width: 93%;
-    margin: auto;
+    width: 83%;
     padding: 30px;
     border: solid 3px #000000; 
+    background-color: #ffffff;
+    margin:10px auto;
 }
 
 footer{
     text-align: center;
-    width: 93%;
-    margin: auto;
+    width: 83%;
     padding: 30px;
     border: solid 3px #000000; 
+    background-color: #ffffff;
+    margin: 10px auto;
+    text-shadow: 5px 5px 5px blue;
 }
 
 .main .seccionTxt{
@@ -35,7 +43,7 @@ footer{
     display: inline-block;
     }
 
-.seccionTxt .boxTxt{
+.seccionTxt textarea{
     border: solid 1px #000000;
     min-width: 100%;
     min-height: 100%;
@@ -44,20 +52,74 @@ footer{
     overflow: scroll;
 }
 
+/*textarea[placeholder]{
+    font-family: tahoma;
+    font-style: oblique;
+    font-size:medium;
+}*/
+
+textarea[name="user-input"]{
+    font-family: tahoma;
+    font-style: oblique;
+    font-size:medium;
+}
+
+#reset-button{
+    background-color: chartreuse;
+    padding:10px;
+    margin: 10px;
+    border-radius: 10px;
+    font-family:sans-serif;
+    font-size: larger;
+    cursor: pointer;
+}
+
+#reset-button:hover{
+    background: yellow;
+}
+
 .main .seccionMetricas{
     width: 30%;
     height: 280px;
     border: solid 3px #000000;
     float:right;
     position: relative;
-    
 }
 
-.seccionMetricas button{
-    display: block;
-    margin: 5px;
-    padding: 5px;    
+.listaMetricas{
+    list-style: none;
+    padding: 5px;
+    text-align:letf;
+    line-height: 40px;
 }
+
+.li1{
+    font-size:80%;
+}
+
+.li2{
+    font-size:80%;
+}
+
+.li3{
+    font-size:80%;
+}
+
+.li4{
+    font-size:80%;
+}
+
+.li5{
+    font-size:80%;
+}
+
+.li6{
+    font-size:80%;
+}
+
+
+
+
 
 
 

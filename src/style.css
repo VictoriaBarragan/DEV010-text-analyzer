@@ -76,6 +76,7 @@ textarea[name="user-input"]{
 
 #reset-button:hover{
     background: yellow;
+    border-radius: 15px;
 }
 
 .main .seccionMetricas{
@@ -95,24 +96,78 @@ textarea[name="user-input"]{
 
 .li1{
     font-size:80%;
+    font-style: oblique;
+    color:chocolate;
+}
+
+.li1[onclick]:hover{
+    color: cornflowerblue;
+    cursor: pointer;
+    font-size: 90%;
+    font-weight: bolder;
 }
 
 .li2{
     font-size:80%;
+    font-style: oblique;
+    color:chocolate;
+}
+
+.li2[onclick]:hover{
+    color:darkorange;
+    cursor: pointer;
+    font-size: 90%;
+    font-weight: bolder;
 }
 
 .li3{
     font-size:80%;
+    font-style: oblique;
+    color:chocolate;
+}
+
+.li3[onclick]:hover{
+    color:goldenrod;
+    cursor: pointer;
+    font-size: 90%;
+    font-weight: bolder;
 }
 
 .li4{
     font-size:80%;
+    font-style: oblique;
+    color:chocolate;
+}
+
+.li4[onclick]:hover{
+    color:indigo;
+    cursor:pointer;
+    font-size:90%;
+    font-weight: bolder;
 }
 
 .li5{
     font-size:80%;
+    font-style: oblique;
+    color:chocolate;
+}
+
+.li5[onclick]:hover{
+    color:lawngreen;
+    cursor:pointer;
+    font-size: 90%;
+    font-weight: bolder;
 }
 
 .li6{
     font-size:80%;
+    font-style: oblique;
+    color:chocolate;
+}
+
+.li6[onclick]:hover{
+    color:lightseagreen;
+    cursor:pointer;
+    font-size: 90%;
+    font-weight: bolder;
 }

@@ -18,7 +18,7 @@ h1{
     font-weight: normal;
 }
 
-header, .main{
+header, main, footer{
     width: 83%;
     padding: 30px;
     border: solid 3px #000000; 
@@ -28,27 +28,27 @@ header, .main{
 
 footer{
     text-align: center;
-    width: 83%;
-    padding: 30px;
-    border: solid 3px #000000; 
-    background-color: #ffffff;
-    margin: 10px auto;
     text-shadow: 5px 5px 5px blue;
 }
 
-.main .seccionTxt{
-    width: 68%;
-    height: 280px;
-    border: solid 3px #000000;
-    display: inline-block;
-    }
+main .seccionTxt{
+	width: 68.5%;
+   	margin-right: 1.5%;
+	float: left;
+}
+
+    /*main .seccionTxt{
+        width: 68%;
+        height: 280px;
+        border: solid 3px #000000;
+        display: inline-block;
+        }*/
 
 .seccionTxt textarea{
     border: solid 1px #000000;
     min-width: 100%;
-    min-height: 100%;
-    max-width: 100%;
-    max-height: 80%;
+    min-height: 50%;
+    resize: none;
     overflow: scroll;
 }
 
@@ -79,95 +79,68 @@ textarea[name="user-input"]{
     border-radius: 15px;
 }
 
-.main .seccionMetricas{
+/*main .seccionMetricas{
     width: 30%;
     height: 280px;
     border: solid 3px #000000;
     float:right;
-    position: relative;
+}*/
+
+main #seccionMetricas{
+	width: 30%;
+	float: left;
+	padding: 5px;
+	box-sizing: border-box;
+    border: solid 2px #000000;
 }
 
-.listaMetricas{
+#seccionMetricas{
     list-style: none;
     padding: 5px;
     text-align:letf;
     line-height: 40px;
+    float: left;
+}
+
+.seccionTxt{
+    list-style: none;
 }
 
 .li1{
-    font-size:80%;
+    font-size: 80%;
     font-style: oblique;
     color:chocolate;
+    cursor: pointer;
+    border: solid #ffffff;
+    margin: 0 auto;
+    padding: 0;
 }
 
-.li1[onclick]:hover{
+.li1:hover{
+    font-size: 90%;
+    /*font-weight: bolder;*/
+}
+
+li[data-testid="word-count"]:hover{
     color: cornflowerblue;
-    cursor: pointer;
-    font-size: 90%;
-    font-weight: bolder;
 }
 
-.li2{
-    font-size:80%;
-    font-style: oblique;
-    color:chocolate;
-}
-
-.li2[onclick]:hover{
+li[data-testid="character-count"]:hover{
     color:darkorange;
-    cursor: pointer;
-    font-size: 90%;
-    font-weight: bolder;
 }
 
-.li3{
-    font-size:80%;
-    font-style: oblique;
-    color:chocolate;
-}
-
-.li3[onclick]:hover{
+li[data-testid="character-no-spaces-count"]:hover{
     color:goldenrod;
-    cursor: pointer;
-    font-size: 90%;
-    font-weight: bolder;
 }
 
-.li4{
-    font-size:80%;
-    font-style: oblique;
-    color:chocolate;
-}
-
-.li4[onclick]:hover{
+li[data-testid="number-count"]:hover{
     color:indigo;
-    cursor:pointer;
-    font-size:90%;
-    font-weight: bolder;
 }
 
-.li5{
-    font-size:80%;
-    font-style: oblique;
-    color:chocolate;
-}
-
-.li5[onclick]:hover{
+li[data-testid="number-sum"]:hover{
     color:lawngreen;
-    cursor:pointer;
-    font-size: 90%;
-    font-weight: bolder;
 }
 
-.li6{
-    font-size:80%;
-    font-style: oblique;
-    color:chocolate;
-}
-
-.li6[onclick]:hover{
+li[data-testid="word-length-average"]:hover{
     color:lightseagreen;
-    cursor:pointer;
-    font-size: 90%;
-    font-weight: bolder;
 }

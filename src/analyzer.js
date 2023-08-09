@@ -11,10 +11,12 @@ const analyzer = {
 
   getCharacterCount: (text) => {
     //TODO: esta función debe retornar el recuento de caracteres que se encuentran en el parámetro `text` de tipo `string`.
-    const arrSinEspacios = text.trim();
+    const arrSinEspacios = text.trim(' ');
     let cantCaracteres = 0;
     for (let i = 0; i < arrSinEspacios.length; i++) {
-      cantCaracteres += 1;
+      if ((arrSinEspacios[i] !== /[a-z][A-Z]/) || (arrSinEspacios[i] !== /[.;,]/)){
+        cantCaracteres += 1;
+      }
     }
     return cantCaracteres;
   },
@@ -22,33 +24,34 @@ const analyzer = {
   getCharacterCountExcludingSpaces: (text) => {
     //TODO: esta función debe retornar el recuento de caracteres excluyendo espacios y signos de puntuación que se encuentran en el parámetro `text` de tipo `string`.
     const arrSinEspacios = text.trim();
-    let cantCaracteresEsp = 0;
+    let cantCaracteresSinEsp = 0;
     /*const expresion1 = /[\s]/;*/
     for (let i = 0; i < arrSinEspacios.length; i++) {
       if ((arrSinEspacios[i]) !== (" ")) {
-        cantCaracteresEsp += 1;
+        cantCaracteresSinEsp += 1;
       }
     }
-    return cantCaracteresEsp;
+    return cantCaracteresSinEsp;
   },
 
   getAverageWordLength: (text) => {
     //TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro `text` de tipo `string`.
-    const arr = text.split(' ');
+    const arr = text.trim().split(' ');
     let cantPalabras = 0;
-    let cantSilabas = 0;
-    let promedioLong = 0;
-    let sumLongitud = 0;
     for (let i = 0; i < arr.length; i++) {
-      const palabraIndividual = arr[i].split(' ');
-      for (let j = 0; j < palabraIndividual.length; j++) {
-        cantSilabas = cantSilabas + [j + 1];
-        sumLongitud += cantSilabas;
-      }
-      cantPalabras = cantPalabras + [i + 1];
-      promedioLong = sumLongitud / cantPalabras;
+      cantPalabras += 1;
     }
-    return promedioLong;
+
+    const arrSinEspacios = text.trim();
+    let cantCaracteresSinEsp = 0;
+    /*const expresion1 = /[\s]/;*/
+    for (let i = 0; i < arrSinEspacios.length; i++) {
+      if ((arrSinEspacios[i]) !== (" ")) {
+        cantCaracteresSinEsp += 1;
+      }
+    }
+    const prom = (cantCaracteresSinEsp/cantPalabras);
+    return prom.toFixed(2);
   },
 
   getNumberCount: (text) => {

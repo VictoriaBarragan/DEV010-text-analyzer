@@ -14,24 +14,24 @@
     <h1>Analizador de texto VICKYTYPE</h1>
   </header>
 
-  <section class="main">
+  <main>
     <section class="seccionTxt">
-      <textarea name="user-input" placeholder="Dale... ingresa tu texto!"></textarea><br>
-      <button id="reset-button">Limpiar</button>
+      <textarea name="user-input" placeholder="Dale... ingresa tu texto!" cols="50" rows="16"></textarea><br>
     </section>
-    <section class="seccionMetricas">
-        <ul class="listaMetricas">
-          <li class="li1" data-testid="word-count" onclick="alert(this.innerHTML)">Palabras:</li>
-          <li class="li2" data-testid="character-count" onclick="alert(this.innerHTML)"> Caracteres (incluyendo espacios):</li>
-          <li class="li3" data-testid="character-no-spaces-count" onclick="alert(this.innerHTML)"> Caracteres (excluyendo espacios):</li>
-          <li class="li4" data-testid="number-count" onclick="alert(this.innerHTML)"> Números:</li>
-          <li class="li5" data-testid="number-sum" onclick="alert(this.innerHTML)"> Sumatoria:</li>
-          <li class="li6" data-testid="word-length-average" onclick="alert(this.innerHTML)"> Longitud media palabras:</li>
+    <section id="seccionMetricas">
+        <ul class="seccionTxt">
+          <li class="li1 " data-testid="word-count" onclick="alert(this.innerHTM" title="Cantidad de palabras">Palabras:</li>
+          <li class="li1" data-testid="character-count" onclick="alert(this.innerHTML)" title="Cantidad de caracteres incluidos espacios y signos puntuación">Caracteres IESP:</li>
+          <li class="li1" data-testid="character-no-spaces-count" onclick="alert(this.innerHTML)" title="Cantidad de caracteres excluyendo espacios"> Caracteres EE:</li>
+          <li class="li1" data-testid="number-count" onclick="alert(this.innerHTML)" title="Cantidad de números">Números:</li>
+          <li class="li1" data-testid="number-sum" onclick="alert(this.innerHTML)" title="Sumatoria de los números digitados">Sumatoria números:</li>
+          <li class="li1" data-testid="word-length-average" onclick="alert(this.innerHTML)" title="Longitud promedio de las palabras digitadas">Longitud media palabras:</li>
         </ul>
     </section>
-  </section>
+    <button id="reset-button">Limpiar</button>
+  </main>
 
-  <footer>
+  <footer >
     <p>Elsa Victoria Barragán O.</p>   
   </footer>
 </body>

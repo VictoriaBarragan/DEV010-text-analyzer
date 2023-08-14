@@ -4,9 +4,8 @@ const analyzer = {
     const arr = text.trim().split(' ');
     let cantPalabras = 0;
     const patternAnyNumber = /\d/; //Patrón para cualquier número.
-    //const patternSpecialChar = /[.;,]+/;  //Patrón para indicar signos de puntuación.
     for (let i = 0; i < arr.length; i++) {
-      if (arr[i].match(patternAnyNumber)){
+      if (arr[i].match(patternAnyNumber)) {
         continue;
       }
       cantPalabras += 1;
@@ -37,11 +36,10 @@ const analyzer = {
     const arrSinEspacios = text.trim();
     let cantCaracteresSinEsp = 0;
     const patternPunc = /[.;,]+/;
-    /*const expresion1 = /[\s]/;*/
     for (let i = 0; i < arrSinEspacios.length; i++) {
-      if(arrSinEspacios[i].match(patternPunc)){
+      if (arrSinEspacios[i].match(patternPunc)) {
         continue;
-      }else if (arrSinEspacios[i] !== (" ")){
+      } else if (arrSinEspacios[i] !== (" ")) {
         cantCaracteresSinEsp += 1;
       }
     }
@@ -58,13 +56,12 @@ const analyzer = {
 
     const arrSinEspacios = text.trim();
     let cantCaracteresSinEsp = 0;
-    /*const expresion1 = /[\s]/;*/
     for (let i = 0; i < arrSinEspacios.length; i++) {
       if ((arrSinEspacios[i]) !== (" ")) {
         cantCaracteresSinEsp += 1;
       }
     }
-    const prom = (cantCaracteresSinEsp)/parseFloat(cantPalabras);
+    const prom = (cantCaracteresSinEsp) / parseFloat(cantPalabras);
     return parseFloat(prom.toFixed(2));
   },
 
@@ -72,14 +69,9 @@ const analyzer = {
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
     const arrSinEspacios = text.trim().split(' ');
     let cantNumeros = 0;
-    const expresionNumInt = /\d/;
-    const expresionNumDec = /\d{1, }.\d{0, }/
-    const expresionLetras = /\D/;
+    const expresionNum = /-?\b\d+(\.\d+)?\b/g;
     for (let i = 0; i < arrSinEspacios.length; i++) {
-      if(arrSinEspacios[i].match(expresionLetras)){
-        continue;
-      }
-      if (arrSinEspacios[i].match(expresionNumInt) || arrSinEspacios[i].match(expresionNumDec)){
+      if (arrSinEspacios[i].match(expresionNum)) {
         cantNumeros += 1;
       }
     }
@@ -90,14 +82,10 @@ const analyzer = {
     //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
     const arrSinEspacios = text.trim().split(' ');
     let sumNumeros = 0;
-    const expresionNumInt = /\d/;
-    const expresionNumDec = /\d{1, }.\d{0, }/
-    const expresionLetras = /\D/;
+    const expresionNum = /-?\b\d+(\.\d+)?\b/g;
     for (let i = 0; i < arrSinEspacios.length; i++) {
-      if(arrSinEspacios[i].match(expresionLetras)){
-        continue;
-      }else if(arrSinEspacios[i].match(expresionNumInt) || arrSinEspacios[i].match(expresionNumDec)) {
-        sumNumeros = (parseFloat(sumNumeros) + parseFloat(arrSinEspacios[i])); 
+      if(arrSinEspacios[i].match(expresionNum)) {
+        sumNumeros = (parseFloat(sumNumeros) + parseFloat(arrSinEspacios[i]));
       }
     }
     return parseFloat(sumNumeros);
